@@ -44,7 +44,7 @@ class beike(scrapy.Spider):
         base_detail = response.xpath('//div[@class="base"]/div[@class="content"]/ul/li').getall() # 多个
         transaction = response.xpath('//div[@class="transaction"]/div[@class="content"]/ul/li').getall() # 多个
         special = response.xpath('//div[@class="introContent showbasemore"]//a/text()').getall() # 多个
-        house_img = response.xpath('//div[@class="imgdiv"]/@data-img').get() # 多个
+        house_img = response.xpath('//div[@class="thumbnail"]//li[@data-desc="户型图"]/@data-pic').get()
         fangDb.insertDetail(fkey,
                             name,
                             total,

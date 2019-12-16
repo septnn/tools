@@ -3,17 +3,21 @@ import pymysql
 class fangDb:
 
     def insertUrl(self, url):
-        sql = "INSERT INTO `fang_list` SET `url` = %s;";
-        return self.exec(sql);           
+        sql = "INSERT INTO `fang_list` SET `url` = %s;"
+        print(sql)
+        return ''
+        return self.exec(sql, (url));           
 
-    def insertDetail(self, sql):
-        sql = "" 
-        return self.exec(sql);
+    def insertDetail(self, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img):
+        sql = "INSERT INTO `fang_detail` SET `fkey` = %s, `name` = %s, `total` = %s, `unit` = %s, `house_loyout` = %s, `house_turn` = %s, `house_area` = %s, `house_build` = %s, `community` = %s, `area` = %s, `base_detail` = %s, `transaction` = %s, `special` = %s, `house_img` = %s;"
+        print(sql)
+        return ''
+        return self.exec(sql, (fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img));
 
-    def exec(self, sql):
+    def exec(self, sql, val):
         try:
             with self.conn().cursor() as cursor: # with 自动关闭cursor.close()
-                return cursor.execute(sql, (url))
+                return cursor.execute(sql, val)
         finally:
             self.conn().close()
         return False
