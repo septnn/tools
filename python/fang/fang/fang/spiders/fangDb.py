@@ -23,10 +23,10 @@ class fangDb:
         return False
 
     def conn(self):
-        return pymysql.connect( host="60.205.202.6",
-                                user="dev",
-                                password="ewDKkdQO",
-                                database="test_dawei",
+        return pymysql.connect( host="192.168.31.224",
+                                user="test",
+                                password="123456",
+                                database="fang",
                                 charset="utf8",
                                 autocommit=True)
 
