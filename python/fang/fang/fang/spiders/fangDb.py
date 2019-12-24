@@ -1,16 +1,23 @@
 import pymysql
+from w3lib.html import remove_tags
+import re
 
 class fangDb:
 
+    def f(self, value):
+        # 移除标签
+        content = remove_tags(value)
+        # 移除空格 换行
+        return re.sub(r'[\t\r\n\s]', '', content)
+
     def insertUrl(self, url):
         sql = "INSERT INTO `fang_list` SET `url` = %s;"
-        print(sql)
         return self.exec(sql, (url));           
 
-    def insertDetail(self, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img):
-        sql = "INSERT INTO `fang_detail` SET `fkey` = %s, `name` = %s, `total` = %s, `unit` = %s, `house_loyout` = %s, `house_turn` = %s, `house_area` = %s, `house_build` = %s, `community` = %s, `area` = %s, `base_detail` = %s, `transaction` = %s, `special` = %s, `house_img` = %s;"
-        print(sql)
-        return self.exec(sql, [fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img]);
+    def insertDetail(self, url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img):
+        sql = "INSERT INTO `fang_detail` SET `url` = %s, `fkey` = %s, `name` = %s, `total` = %s, `unit` = %s, `house_loyout` = %s, `house_turn` = %s, `house_area` = %s, `house_build` = %s, `community` = %s, `area` = %s, `base_detail` = %s, `transaction` = %s, `special` = %s, `house_img` = %s;"
+        return self.exec(sql, [url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, self.f(area), self.f(base_detail), self.f(transaction), self.f(special), house_img]);
+        # return self.exec(sql, [url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img]);
 
     def exec(self, sql, val):
         try:
