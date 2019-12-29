@@ -10,14 +10,20 @@ class fangDb:
         # 移除空格 换行
         return re.sub(r'[\t\r\n\s]', '', content)
 
-    def insertUrl(self, url):
-        sql = "INSERT INTO `fang_list` SET `url` = %s;"
-        return self.exec(sql, (url));           
+    def insertUrl(self, url, name, community, layout, tag, total, unit):
+        sql = "INSERT INTO `fang_list` SET `url` = %s, `name` = %s, `community` = %s, `layout` = %s, `tag` = %s, `total` = %s, `unit` = %s;"
+        return self.exec(sql, [url, name, community, layout, tag, total, unit]);           
 
     def insertDetail(self, url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img):
         sql = "INSERT INTO `fang_detail` SET `url` = %s, `fkey` = %s, `name` = %s, `total` = %s, `unit` = %s, `house_loyout` = %s, `house_turn` = %s, `house_area` = %s, `house_build` = %s, `community` = %s, `area` = %s, `base_detail` = %s, `transaction` = %s, `special` = %s, `house_img` = %s;"
         return self.exec(sql, [url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, self.f(area), self.f(base_detail), self.f(transaction), self.f(special), house_img]);
         # return self.exec(sql, [url, fkey, name, total, unit, house_loyout, house_turn, house_area, house_build, community, area, base_detail, transaction, special, house_img]);
+    
+    def truncate(self):
+        sql = "TRUNCATE `fang_list`;"
+        self.exec(sql, [])
+        sql = "TRUNCATE `fang_detail`;"
+        return self.exec(sql, [])
 
     def exec(self, sql, val):
         try:

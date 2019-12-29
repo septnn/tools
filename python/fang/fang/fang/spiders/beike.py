@@ -1,4 +1,5 @@
 import scrapy;
+
 from fang.spiders.fangDb import *
 
 class beike(scrapy.Spider):
@@ -7,6 +8,8 @@ class beike(scrapy.Spider):
         self.fangDb = fangDb()
 
     def start_requests(self):
+        # 清空表
+        self.fangDb.truncate()
         urls = [];
         for num in range(100):
             t = 'https://tj.ke.com/ershoufang/' + "pg" + str(num) + "mw1su1ty1bt2dp1sf1bp50ep150/"
@@ -18,14 +21,18 @@ class beike(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-        urls = response.xpath('//a[@class="img VIEWDATA CLICKDATA maidian-detail"]/@href').getall()
-        # urls = [
-        #     'https://tj.ke.com/ershoufang/19121411410100117140.html'
-        # ]
-        for url in urls:
-            self.fangDb.insertUrl(url)
+        for li in response.xpath('//li[@class="clear"]'):
+            url = li.xpath('./a/@href').get()
+            name = li.xpath('./a/@title').get()
+            community = li.xpath('./div/div[@class="address"]/div[@class="flood"]/div[@class="positionInfo"]/a/text()').get()
+            layout = li.xpath('./div/div[@class="address"]/div[@class="houseInfo"]/text()').getall()[1]
+            tag = ','.join(li.xpath('./div/div[@class="address"]/div[@class="tag"]/span/text()').getall())
+            total = li.xpath('./div//div[@class="totalPrice"]/span/text()').get()
+            unit = li.xpath('./div//div[@class="unitPrice"]/@data-price').get()
+            # print([url,name,community,layout,tag,total,unit])
+            print(self.fangDb.insertUrl(url,name,community,layout,tag,total,unit))
             yield scrapy.Request(url=url, callback=self.detailCallback)
-
+            
     def detailCallback(self, response):
         url = response.url
         fkey = response.xpath('//head/title/text()').get()
