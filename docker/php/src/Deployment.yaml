@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment # 此处创建的是Pod，根据实际情况，此处资源类型可以是Deployment、Job、Ingress、Service等
+metadata:
+  creationTimestamp: null
+  labels: #定义标签
+    app: np
+  name: np #定义pod名字
+  namespace: septnn #命名空间
+spec:
+  progressDeadlineSeconds: 60 # 等待60s
+  replicas: 1 # 副本数量，默认1
+  revisionHistoryLimit: 0 # 保留多少旧的副本
+  selector: null # 管理pod的范围
+  strategy: # 新pod替换旧pod策略
+    rollingUpdate: # 滚动升级
+      maxSurge: 25% # 超过期望的pod数量的最大数
+      maxUnavailable: 25% # 升级过程中不可用的pod最大数
+    type: RollingUpdate # 滚动升级
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers: 
+        - name: nginx
+          image: nginx
+      
+      #dnsPolicy: ClusterFirst
+      #restartPolicy: Always
+      #schedulerName: default-scheduler
+      #securityContext: {}
+      #terminationGracePeriodSeconds: 30
+#status: {}
