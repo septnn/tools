@@ -1,3 +1,5 @@
-docker.exe run --name nginx -itd --dns=114.114.114.114 -p 80:80 -p 443:443 -v /c/Users/JWD/Documents/git:/home/git -v /c/Users/JWD/Documents/git/github/septnn/tools/docker/dev/v3/conf/nginx:/etc/nginx nginx:1.17.6 /bin/sh -c "mkdir /var/log/service && chmod 777 /var/log/service"
-
-docker.exe run --name php-fpm -itd --dns=114.114.114.114 -p 9000:9000 -v /c/Users/JWD/Documents/git:/home/git -v /c/Users/JWD/Documents/git/github/septnn/tools/docker/dev/v3/conf/php:/usr/local/etc php:7.4.1-fpm-alpine /bin/sh -c "mkdir /var/log/service && chmod 777 /var/log/service  && docker-php-ext-install pdo_mysql"
+cd conf/php/
+sh build.sh
+cd ../../conf/nginx/
+sh build.sh
+cd ../../
