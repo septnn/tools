@@ -6,7 +6,7 @@ from win32con import AW_ACTIVATE, AW_BLEND, AW_CENTER, AW_HIDE, AW_HOR_NEGATIVE,
 from ctypes import windll, c_int
 
 
-APP_TITLE = u'菜单、工具栏、状态栏'
+APP_TITLE = u'TDL'
 APP_ICON = './favicon.ico'
 
 class mainFrame(wx.Frame):
@@ -22,7 +22,7 @@ class mainFrame(wx.Frame):
     def __init__(self, parent):
         '''构造函数'''
 
-        wx.Frame.__init__(self, parent, -1, APP_TITLE)
+        wx.Frame.__init__(self, parent, id=-1, title=APP_TITLE)
         workarea = win32api.GetMonitorInfo(1)['Work']
         print(workarea)
         pos=(workarea[2]-280,workarea[3]-180)
@@ -40,7 +40,8 @@ class mainFrame(wx.Frame):
         self.SetIcon(icon)
         
         # self.Maximize() # 左上角
-        self.SetWindowStyle(wx.DEFAULT_FRAME_STYLE)
+        # 控制最大化，最小化按钮
+        self.SetWindowStyle(wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.CLOSE_BOX))
 
         # AW_SLIDE 使用滑动类型。缺省为滚动类型。使用AW_CENTER标志时被忽略
         # AW_VER_NEGATIVE 自下向上显示窗口。该标志可以在滚动动画和滑动动画中使用。当使用AW_CENTER标志时，该标志将被忽略
@@ -49,11 +50,21 @@ class mainFrame(wx.Frame):
         windll.user32.AnimateWindow(c_int(self.GetHandle()), c_int(600), c_int(flags)) # 淡入淡出
         self.Refresh() # 底部淡出
         # self.Bind(wx.EVT_CLOSE,self.RemovePopup)
+
+        ws = wx.WrapSizer()
+
+        inputText = wx.TextCtrl(self, -1, u'', size=(175, -1), style=wx.TE_MULTILINE|wx.TE_PROCESS_ENTER)  
+        inputText.SetInsertionPoint(0)
+        inputText.SetFocus()
+        ws.Add(inputText)
+        self.Bind(wx.EVT_TEXT_ENTER, self.submit)
         
         # self._CreateMenuBar()         # 菜单栏
         # self._CreateToolBar()         # 工具栏
         # self._CreateStatusBar()       # 状态栏
-    
+    def submit(self, params):
+        print(params)
+
     def _CreateMenuBar(self):
         '''创建菜单栏'''
         
