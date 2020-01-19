@@ -1,6 +1,7 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 import wx
-import sys, os
+import sys, os, time
 import win32api
 from win32con import AW_ACTIVATE, AW_BLEND, AW_CENTER, AW_HIDE, AW_HOR_NEGATIVE, AW_HOR_POSITIVE, AW_SLIDE, AW_VER_NEGATIVE, AW_VER_POSITIVE,SPI_GETWORKAREA
 from ctypes import windll, c_int
@@ -23,47 +24,74 @@ class mainFrame(wx.Frame):
         '''构造函数'''
 
         wx.Frame.__init__(self, parent, id=-1, title=APP_TITLE)
+        # 获得右下坐标
         workarea = win32api.GetMonitorInfo(1)['Work']
-        print(workarea)
         pos=(workarea[2]-280,workarea[3]-180)
-        print(pos)
+        # 设置背景颜色
         self.SetBackgroundColour(wx.Colour(224, 224, 224))
+        # 设置大小
         self.SetSize((200, 150))
+        # 设置最大大小
         self.SetMaxSize((200, 150))
+        # 设置定位
         self.SetPosition(pos)
+        # 居中
         # self.Center()
-        
-        if hasattr(sys, "frozen") and getattr(sys, "frozen") == "windows_exe":
-            icon = wx.Icon(APP_ICON, wx.BITMAP_TYPE_ICO)
-        else :
-            icon = wx.Icon(APP_ICON, wx.BITMAP_TYPE_ICO)
-        self.SetIcon(icon)
-        
-        # self.Maximize() # 左上角
+        # 设置icon
+        self.SetIcon(wx.Icon(APP_ICON, wx.BITMAP_TYPE_ICO))
+        # self.Maximize()
         # 控制最大化，最小化按钮
-        self.SetWindowStyle(wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MAXIMIZE_BOX|wx.MINIMIZE_BOX|wx.CLOSE_BOX))
+        # STAY_ON_TOP 强制置顶
+        # MINIMIZE_BOX 最小化
+        self.SetWindowStyle(wx.DEFAULT_FRAME_STYLE^(wx.RESIZE_BORDER|wx.MAXIMIZE_BOX|wx.CLOSE_BOX)|wx.STAY_ON_TOP)
 
         # AW_SLIDE 使用滑动类型。缺省为滚动类型。使用AW_CENTER标志时被忽略
         # AW_VER_NEGATIVE 自下向上显示窗口。该标志可以在滚动动画和滑动动画中使用。当使用AW_CENTER标志时，该标志将被忽略
         # AW_ACTIVATE 激活窗口。在使用了AW_HIDE标志后不能使用这个标志
         flags = AW_SLIDE | AW_VER_NEGATIVE | AW_ACTIVATE
         windll.user32.AnimateWindow(c_int(self.GetHandle()), c_int(600), c_int(flags)) # 淡入淡出
-        self.Refresh() # 底部淡出
-        # self.Bind(wx.EVT_CLOSE,self.RemovePopup)
+        # self.Refresh() # 底部淡出
+        # self.Bind(wx.EVT_CLOSE,self.close)
 
         ws = wx.WrapSizer()
 
-        inputText = wx.TextCtrl(self, -1, u'', size=(175, -1), style=wx.TE_MULTILINE|wx.TE_PROCESS_ENTER)  
-        inputText.SetInsertionPoint(0)
-        inputText.SetFocus()
-        ws.Add(inputText)
+        # self.text = wx.TextCtrl(self, -1, u'', size=(175, -1), style=wx.TE_MULTILINE|wx.TE_PROCESS_ENTER)  # 多文本框
+        self.text = wx.TextCtrl(self, -1, u'', size=(175, -1), style=wx.TE_PROCESS_ENTER)  
+        self.text.SetInsertionPoint(0)
+        self.text.SetFocus()
+        ws.Add(self.text)
         self.Bind(wx.EVT_TEXT_ENTER, self.submit)
+
+        print()
+        # 创建定时器 
+        self.timer = wx.Timer(self)#创建定时器 
+        self.Bind(wx.EVT_TIMER, self.OnTimer, self.timer)#绑定一个定时器事件 
+        todo = 2 * 60 * 1000
+        # todo = 5000
+        self.timer.Start(todo)#设定时间间隔为1000毫秒,并启动定时器
+        
         
         # self._CreateMenuBar()         # 菜单栏
         # self._CreateToolBar()         # 工具栏
         # self._CreateStatusBar()       # 状态栏
-    def submit(self, params):
-        print(params)
+    def OnTimer(self, params):
+        self.Iconize(False)
+        self.text.SetFocus()
+        self.Show()
+    def close(self, params):
+        self.Hide() # 隐藏
+    def submit(self, enter):
+        s = enter.GetString()
+        print(s)
+        # 写入文件
+        m = time.strftime('%m',time.localtime(time.time()))
+        d = time.strftime('%d',time.localtime(time.time()))
+        fileName = m+'.md'
+        with open(fileName, 'a+', encoding="utf-8") as file:
+            file.write('- ['+d+'] '+s+'\n')
+        self.text.Clear()
+        self.Iconize(True)
+        # self.Hide()
 
     def _CreateMenuBar(self):
         '''创建菜单栏'''
