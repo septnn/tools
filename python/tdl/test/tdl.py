@@ -66,7 +66,7 @@ class mainFrame(wx.Frame):
         # 创建定时器 
         self.timer = wx.Timer(self)#创建定时器 
         self.Bind(wx.EVT_TIMER, self.OnTimer, self.timer)#绑定一个定时器事件 
-        todo = 2 * 60 * 1000
+        todo = 2 * 3600 * 1000
         # todo = 5000
         self.timer.Start(todo)#设定时间间隔为1000毫秒,并启动定时器
         

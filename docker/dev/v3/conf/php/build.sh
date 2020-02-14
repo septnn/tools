@@ -3,6 +3,7 @@ docker rm php-fpm
 docker rmi $(docker images php:1.0-fpm-septnn -q)
 docker build -t php:1.0-fpm-septnn .
 docker run --name php-fpm -itd -p 9000:9000 \
+--cap-add=SYS_PTRACE \
 --add-host='application-ssd-api:192.168.99.100' \
 --add-host='application-tos-api:192.168.99.100' \
 --add-host='tos-api.juewei.com:192.168.99.100' \
