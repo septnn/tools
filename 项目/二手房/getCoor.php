@@ -1,5 +1,9 @@
 <?php
-$s = '1:和平区实验小学,
+
+
+function small($isOpen = false) {
+    if($isOpen === false) return false;
+    $s = '1:和平区实验小学,
 2:和平区中心小学,
 3:和平区鞍山道小学,
 4:和平区昆鹏小学,
@@ -33,27 +37,61 @@ $s = '1:和平区实验小学,
 32:和平区耀华小学,
 33:河东区缘诚小学,
 34:河西区华江里小学,
-35:和平区二十中学附小';
+35:和平区二十中学附小学';
 
-$s = str_replace("\n", '', $s);
-$s = explode(',', $s);
-print_r($s);
-$key = 'jzWPDpvR5sv5q8HYadnjK7ICl7dr6Kn5';
-$url = 'http://api.map.baidu.com/geocoding/v3/?output=json&ak='.$key.'&address=';
-$school = [];
-foreach($s as $key => $value) {
-    $name = explode(':', $value);
-    $res = json_decode(file_get_contents($url.$name[1]), 1);
-    $school[] = [
-        'name' => $name[1],
-        'coor' => [
-            'lng' => $res['result']['location']['lng'],
-            'lat' => $res['result']['location']['lat'],
-            ]
-    ];
+    $s = str_replace("\n", '', $s);
+    $s = explode(',', $s);
+    print_r($s);
+    $key = 'jzWPDpvR5sv5q8HYadnjK7ICl7dr6Kn5';
+    $url = 'http://api.map.baidu.com/geocoding/v3/?output=json&ak='.$key.'&address=';
+    $small = [];
+    foreach($s as $key => $value) {
+        $name = explode(':', $value);
+        $res = json_decode(file_get_contents($url.$name[1]), 1);
+        $small[] = [
+            'school' => '小学',
+            'name' => $name[1],
+            'coor' => [
+                'lng' => $res['result']['location']['lng'],
+                'lat' => $res['result']['location']['lat'],
+                ]
+        ];
+    }
+
+    $json = json_encode($small, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+    file_put_contents('./small.json', $json);
+    $json = "var small = ".$json;
+    file_put_contents('./small.js', $json);
 }
 
-$json = json_encode($school, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
-file_put_contents('./school.json', $json);
-$json = "var school = ".$json;
-file_put_contents('./school.js', $json);
+
+function middle($isOpen = false) {
+    if($isOpen === false) return false;
+    $s = '天津耀华中学,天津南开中学,天津第一中学,天津实验中学,天津市第二十中学,天津市第一百中学,天津新华中学,天津七中,天津市第42中学,天津市第五十五中学,天津外国语学院附属中学,天津一中';
+
+    $s = str_replace("\n", '', $s);
+    $s = explode(',', $s);
+    print_r($s);
+    $key = 'jzWPDpvR5sv5q8HYadnjK7ICl7dr6Kn5';
+    $url = 'http://api.map.baidu.com/geocoding/v3/?output=json&ak='.$key.'&address=';
+    $middle = [];
+    foreach($s as $key => $value) {
+        $name = $value;
+        $res = json_decode(file_get_contents($url.$name), 1);
+        $middle[] = [
+            'school' => '初中',
+            'name' => $name,
+            'coor' => [
+                'lng' => $res['result']['location']['lng'],
+                'lat' => $res['result']['location']['lat'],
+                ]
+        ];
+    }
+
+    $json = json_encode($middle, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+    file_put_contents('./middle.json', $json);
+    $json = "var middle = ".$json;
+    file_put_contents('./middle.js', $json);
+}
+
+middle(true);

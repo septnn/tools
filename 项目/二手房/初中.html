@@ -7,7 +7,7 @@
 	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
 	</style>
 	<script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=kdMGGPvQyCe3sYQQu1vb4mkW5N1YV6eF&services=&t=20200103103842"></script>
-	<script type="text/javascript" src="./small.js"></script>
+	<script type="text/javascript" src="./middle.js"></script>
 
 	<title>地图展示</title>
 </head>
@@ -28,12 +28,12 @@ window.onload = function() {
         ]}));	  
 	map.setCurrentCity("天津");          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-    var smallLen = small.length
-    for (let index = 0; index < smallLen; index++) {
-        var point = new BMap.Point(small[index].coor.lng, small[index].coor.lat);
+    var middleLen = middle.length
+    for (let index = 0; index < middleLen; index++) {
+        var point = new BMap.Point(middle[index].coor.lng, middle[index].coor.lat);
         var marker = new BMap.Marker(point);
         map.addOverlay(marker);
-        var label = new BMap.Label((index+1)+':'+small[index].name, {offset:new BMap.Size(20,-10)});
+        var label = new BMap.Label((index+1)+':'+middle[index].name, {offset:new BMap.Size(20,-10)});
         marker.setLabel(label);
         
         console.log(point)
