@@ -25,7 +25,12 @@ class mainFrame(wx.Frame):
 
         wx.Frame.__init__(self, parent, id=-1, title=APP_TITLE)
         # 获得右下坐标
-        workarea = win32api.GetMonitorInfo(1)['Work']
+        #workarea = win32api.GetMonitorInfo(1)['Work']
+        for monitor in win32api.EnumDisplayMonitors():
+            monitor_info = win32api.GetMonitorInfo(monitor[0])
+            if monitor_info['Flags'] == 1:
+                break
+        workarea = monitor_info['Work']
         pos=(workarea[2]-280,workarea[3]-180)
         # 设置背景颜色
         self.SetBackgroundColour(wx.Colour(224, 224, 224))
