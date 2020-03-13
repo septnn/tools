@@ -11,6 +11,7 @@
   - [ ] [二手房](项目/二手房) `贝壳爬虫+百度地图`
 - [Docker](docker/)
   - [x] [Aria2+AriaNg](docker/aria2/)
+  - [ ] [微信机器人](docker/wxbot/)
   - [ ] [k8s 实验](docker/k8s/)
   - [ ] [开发环境](docker/dev/)
 - [python]
