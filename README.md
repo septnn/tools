@@ -10,7 +10,6 @@
 - [项目](项目/)
   - [ ] [二手房](项目/二手房) `贝壳爬虫+百度地图`
 - [Docker](docker/)
-  - [x] [Aria2+AriaNg](docker/aria2/)
 - [python]
   - [x] [每两个小时右下角弹框](python/tdl)
 - [Windos]
