@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #=====================================================
 # Description: After Aria2 download start.
 # Lisence: MIT

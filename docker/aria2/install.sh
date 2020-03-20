@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #====================================================
 # Description: Installer.
 # Lisence: MIT
@@ -23,9 +23,9 @@ cp -r docker/* runtimes/
 cp -r nginx/* runtimes/
 cd runtimes
 # 初始化配置
-/usr/bin/env bash env.sh
+/usr/bin/env sh env.sh
 # 构建镜像
-/usr/bin/env bash build.sh
+/usr/bin/env sh build.sh
 # 删除执行时文件
 ec 'Delete runtimes file.'
 cd ../

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #====================================================
 # Description: Build docker images.
 # Lisence: MIT
