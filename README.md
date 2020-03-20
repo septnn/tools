@@ -14,4 +14,4 @@
 - [python]
   - [x] [每两个小时右下角弹框](python/tdl)
 - [Windos]
-  - [x] [邮件Vscode](windows/)
+  - [x] [右键添加Vscode](windows/)
