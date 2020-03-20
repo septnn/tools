@@ -18,10 +18,10 @@ docker rm CONTAINER_NAME
 docker rmi $(docker images CONTAINER -q)
 docker build -t CONTAINER .
 ec 'Build is complete.'
-ec 'Docker running.'
-docker run --name CONTAINER_NAME -itd \
--p ARIA_START_PORT-ARIA_END_PORT:ARIA_START_PORT-ARIA_END_PORT \
---cap-add=SYS_PTRACE \
---dns=114.114.114.114 \
-CONTAINER
+# ec 'Docker running.'
+# docker run --name CONTAINER_NAME -itd \
+# -p ARIA_START_PORT-ARIA_END_PORT:ARIA_START_PORT-ARIA_END_PORT \
+# --cap-add=SYS_PTRACE \
+# --dns=114.114.114.114 \
+# CONTAINER
 set +v
