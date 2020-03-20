@@ -27,5 +27,7 @@ cd runtimes
 # 构建镜像
 /usr/bin/env bash build.sh
 # 删除执行时文件
-rm -rf ./*
+ec 'Delete runtimes file.'
 cd ../
+rm -rf ./runtimes/
+ec 'Installation is complete.'
