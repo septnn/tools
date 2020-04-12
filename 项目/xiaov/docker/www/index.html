@@ -8,7 +8,7 @@
 
 <title>Recorder QuickStart: 快速入门</title>
 <script>
-var Tips="你可以直接将此QuickStart.html文件copy到你的(https)网站中，无需其他文件，就能正常开始测试了；相比index.html这个大而全(杂乱)的demo，本文件更适合入门学习"+unescape("%uD83D%uDE04");
+var Tips=""+unescape("%uD83D%uDE04");
 console.log(Tips);
 </script>
 
@@ -48,21 +48,23 @@ console.log(Tips);
 		<!-- 按钮控制区域 -->
 		<div class="pd btns">
 			<div>
-				<button onclick="recOpen()" style="margin-right:10px">打开录音,请求权限</button>
-				<button onclick="recClose()" style="margin-right:0">关闭录音,释放资源</button>
+				<button onclick="recOpenAndStart()" style="margin-right:10px">请求权限，打开并直接录音</button>
+				<button onclick="recStopAndClose()" style="margin-right:10px">停止录音，关闭并释放资源</button>
+				<!-- <button onclick="recOpen()" style="margin-right:10px">打开录音,请求权限</button>
+				<button onclick="recClose()" style="margin-right:0">关闭录音,释放资源</button> -->
 			</div>
 			
-			<button onclick="recStart()">录制</button>
+			<!-- <button onclick="recStart()">录制</button>
 			<button onclick="recStop()" style="margin-right:80px">停止</button>
 			
 			<span style="display: inline-block;">
 				<button onclick="recPause()">暂停</button>
 				<button onclick="recResume()">继续</button>
-			</span>
-			<span style="display: inline-block;">
+			</span> -->
+			<!-- <span style="display: inline-block;">
 				<button onclick="recPlay()">播放</button>
 				<button onclick="recUpload()">上传</button>
-			</span>
+			</span> -->
 		</div>
 		
 		<!-- 波形绘制区域 -->
@@ -86,6 +88,42 @@ console.log(Tips);
 
 <!-- 【3】实现录音逻辑 -->
 <script>
+
+var uploadNum=1
+var uploadLimitNum=12 // 1s请求12次
+var uuid=null // 1s请求12次，标识当前1s内的12次
+
+var ws=null;
+var wsSend=null;
+var url='wss://192.168.99.100:8143/';
+
+window.onload = function(){
+	ws=new WebSocket(url);
+
+	ws.onopen=function(){
+		recOpenAndStart()
+		wsSend=function(send){
+			// console.log('send......');
+			ws.send(send)
+		}
+	}
+	ws.onerror=function(event){
+		console.log(event)
+	}
+	ws.onmessage=function(res){
+		console.log(res.data);
+	}
+	ws.onclose=function(e){
+		console.log('close...... ' + e.code + ' ' + e.reason + ' ' + e.wasClean)
+		recStopAndClose()
+	}
+}
+
+var sampleRateConfig=16000;
+
+var typeConfig="wav";
+var bitRateConfig=16
+
 var rec,wave,recBlob;
 /**调用open打开录音请求好录音权限**/
 var recOpen=function(){//一般在显示出录音按钮或相关的录音界面时进行此方法调用，后面用户点击开始录音时就能畅通无阻了
@@ -93,7 +131,7 @@ var recOpen=function(){//一般在显示出录音按钮或相关的录音界面�
 	wave=null;
 	recBlob=null;
 	var newRec=Recorder({
-		type:"wav",sampleRate:16000,bitRate:16 //mp3格式，指定采样率hz、比特率kbps，其他参数使用默认配置；注意：是数字的参数必须提供数字，不要用字符串；需要使用的type类型，需提前把格式支持文件加载进来，比如使用wav格式需要提前加载wav.js编码引擎
+		type:typeConfig,sampleRate:sampleRateConfig,bitRate:bitRateConfig //mp3格式，指定采样率hz、比特率kbps，其他参数使用默认配置；注意：是数字的参数必须提供数字，不要用字符串；需要使用的type类型，需提前把格式支持文件加载进来，比如使用wav格式需要提前加载wav.js编码引擎
 		,onProcess:function(buffers,powerLevel,bufferDuration,bufferSampleRate,newBufferIdx,asyncEnd){
 			//录音实时回调，大约1秒调用12次本回调
 			document.querySelector(".recpowerx").style.width=powerLevel+"%";
@@ -127,9 +165,167 @@ var recOpen=function(){//一般在显示出录音按钮或相关的录音界面�
 
 
 
+var recOpenAndStart=function(){//一般在显示出录音按钮或相关的录音界面时进行此方法调用，后面用户点击开始录音时就能畅通无阻了
+	rec=null;
+	wave=null;
+	recBlob=null;
+	allAudio=[0];
+	var newRec=Recorder({
+		type:typeConfig,sampleRate:sampleRateConfig,bitRate:bitRateConfig //mp3格式，指定采样率hz、比特率kbps，其他参数使用默认配置；注意：是数字的参数必须提供数字，不要用字符串；需要使用的type类型，需提前把格式支持文件加载进来，比如使用wav格式需要提前加载wav.js编码引擎
+		,onProcess:function(buffers,powerLevel,bufferDuration,bufferSampleRate,newBufferIdx,asyncEnd){
+			
+			// 1s 12次循环
+			if(uploadNum == 1) {
+				uuid = new Date().getTime();
+				uuid = uuid.toString()
+			}
+			uploadNum++
+			if(uploadNum > uploadLimitNum) {
+				allAudio=[]
+				uploadNum = 1;
+				// 重置
+				// console.log('调试中......第12次停止')
+				// recStopAndClose()
+			}
+			
+			//录音实时回调，大约1秒调用12次本回调
+			document.querySelector(".recpowerx").style.width=powerLevel+"%";
+			document.querySelector(".recpowert").innerText=bufferDuration+" / "+powerLevel;
+			
+			//可视化图形绘制
+			wave.input(buffers[buffers.length-1],powerLevel,bufferSampleRate);
+
+			//借用SampleData函数进行数据的连续处理，采样率转换是顺带的
+			var chunk=Recorder.SampleData(buffers,bufferSampleRate,sampleRateConfig,rec.set.chunkInfo,{frameType:false?"":typeConfig});
+
+			//清理已处理完的缓冲数据，释放内存以支持长时间录音，最后完成录音时不能调用stop，因为数据已经被清掉了
+			for(var i=rec.set.chunkInfo?rec.set.chunkInfo.index:0;i<chunk.index;i++){
+				rec.buffers[i]=null;
+			};
+			rec.set.chunkInfo=chunk;
+
+			//没有新数据，或结束时的数据量太小，不能进行mock转码
+			if(chunk.data.length==0 || false&&chunk.data.length<2000){
+				// TransferUpload(number,null,0,null,false);
+				return;
+			};
+			// console.log(chunk);
+
+			//通过mock方法实时转码成mp3、wav
+			var encStartTime=Date.now();
+			var recMock=Recorder({
+				type:typeConfig
+				,sampleRate:sampleRateConfig //采样率
+				,bitRate:bitRateConfig //比特率
+			});
+			recMock.mock(chunk.data,chunk.sampleRate);
+			recMock.stop(function(blob,duration){
+				blob.encTime=Date.now()-encStartTime;
+
+				var set=rec&&rec.set||{};
+				var id=allAudio.length;
+				allAudio.push({blob:blob,set,duration:duration});
+				
+				// 显示出来
+				// reclog(("已录制")+":"+(set.bitRate||"-")+"kbps "+(set.sampleRate||"-")+"hz "+blob.size+"b ["+(set.type||"-")+"]"+'formatMs(duration||0)'+'ms <button onclick="play('+id+')">播放</button> <span class="p'+id+'"></span> <span class="LogAudio_'+id+'"></span>')
+				// blob是二进制数据
+				if(true) { // base64
+					var reader=new FileReader();
+					reader.onloadend=function(){
+
+						if(false && id == 10) { // 测试网络，或者其它原因导致1s/12次的帧，顺序异常
+							setTimeout(function(){
+								var base64=(/.+;\s*base64\s*,\s*(.+)$/i.exec(reader.result)||[])[1];
+								var send = JSON.stringify({uuid:uuid, id:id, blob:base64})
+								// var send = JSON.stringify({uuid:uuid, id:id, blob:'1'})
+								wsSend(send)
+								return ;
+							}, 500);
+						} else {
+							var base64=(/.+;\s*base64\s*,\s*(.+)$/i.exec(reader.result)||[])[1];
+							var send = JSON.stringify({uuid:uuid, id:id, blob:base64})
+							// var send = JSON.stringify({uuid:uuid, id:id, blob:'1'})
+							wsSend(send)
+						}
+						
+					}
+					reader.readAsDataURL(blob);
+				} else {
+					var send = blob
+					wsSend(send)
+				}
+			
+			},function(msg){
+				
+				//转码错误？没想到什么时候会产生错误！
+				console.log("不应该出现的错误:"+msg);
+			});
+		}
+	});
+
+	
+
+	createDelayDialog(); //我们可以选择性的弹一个对话框：为了防止移动端浏览器存在第三种情况：用户忽略，并且（或者国产系统UC系）浏览器没有任何回调，此处demo省略了弹窗的代码
+	newRec.open(function(){//打开麦克风授权获得相关资源
+		dialogCancel(); //如果开启了弹框，此处需要取消
+		
+		rec=newRec;
+		
+		//此处创建这些音频可视化图形绘制浏览器支持妥妥的
+		wave=Recorder.FrequencyHistogramView({elem:".recwave"});
+		
+		reclog("已打开录音，可以点击录制开始录音了",2);
+		// 直接开始录音
+		recStart()
+	},function(msg,isUserNotAllow){//用户拒绝未授权或不支持
+		dialogCancel(); //如果开启了弹框，此处需要取消
+		reclog((isUserNotAllow?"UserNotAllow，":"")+"打开录音失败："+msg,1);
+	});
+	
+	window.waitDialogClick=function(){
+		dialogCancel();
+		reclog("打开失败：权限请求被忽略，<span style='color:#f00'>用户主动点击的弹窗</span>",1);
+	};
+};
+
+function play(id){
+	var recBlob=allAudio[id].blob;
+	if(!recBlob){
+		reclog("请先录音，然后停止后再播放",1);
+		return;
+	};
+	var cls=("a"+Math.random()).replace(".","");
+	reclog('播放中['+id+']: <span class="'+cls+'"></span>');
+	var audio=document.createElement("audio");
+	audio.controls=true;
+	document.querySelector("."+cls).appendChild(audio);
+	//简单利用URL生成播放地址，注意不用了时需要revokeObjectURL，否则霸占内存
+	audio.src=(window.URL||webkitURL).createObjectURL(recBlob);
+	audio.play();
+
+	setTimeout(function(){
+		(window.URL||webkitURL).revokeObjectURL(audio.src);
+	},5000);
+}
+
+
 /**关闭录音，释放资源**/
 function recClose(){
 	if(rec){
+		rec.close();
+		reclog("已关闭");
+	}else{
+		reclog("未打开录音",1);
+	};
+};
+
+var uploadInterval = true;
+/**关闭录音，释放资源**/
+function recStopAndClose(){
+	if(rec){
+		//关闭定时器
+		if(uploadInterval) clearInterval(uploadInterval);
+		recStop();
 		rec.close();
 		reclog("已关闭");
 	}else{
@@ -142,9 +338,33 @@ function recClose(){
 /**开始录音**/
 function recStart(){//打开了录音后才能进行start、stop调用
 	if(rec&&Recorder.IsOpen()){
+		// 建立连接
 		recBlob=null;
 		rec.start();
 		reclog("已开始录音...");
+		// 打开定时器
+		if(!uploadInterval) {
+			uploadInterval = setInterval(() => {
+				// 获取上一个语音blob
+				// 获取当前语音blob
+				console.log(0.5);
+				if(true) { // 连续获取多个语音片段
+					rec.before = null;
+					var chunk=Recorder.SampleData(rec.buffers,rec.srcSampleRate,rec.set.sampleRate);
+					console.log(rec.buffers)
+					rec.set.sampleRate=chunk.sampleRate;
+					var res=chunk.data;
+					rec[rec.set.type](res,function(blob){
+						console.log(blob)
+						// ok(blob,duration);
+					},function(msg){
+						console.log(msg);
+					});
+				}
+				// 定时清理资源
+			}, 500)
+		}
+		
 	}else{
 		reclog("未打开录音",1);
 	};

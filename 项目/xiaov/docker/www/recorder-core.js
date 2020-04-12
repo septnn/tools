@@ -582,7 +582,7 @@ Recorder.prototype=initFn.prototype={
 			console.error("未open");
 			return;
 		};
-		console.log("["+Date.now()+"]Start");
+		// console.log("["+Date.now()+"]Start");
 		
 		var This=this,set=This.set,ctx=Recorder.Ctx;
 		This._stop();
@@ -659,7 +659,7 @@ Recorder.prototype=initFn.prototype={
 	*/
 	,stop:function(True,False,autoClose){
 		var This=this,set=This.set,t1;
-		console.log("["+Date.now()+"]Stop "+(This.envInLast?This.envInLast-This.envInFirst+"ms 补"+This.envInFix+"ms":"-"));
+		// console.log("["+Date.now()+"]Stop "+(This.envInLast?This.envInLast-This.envInFirst+"ms 补"+This.envInFix+"ms":"-"));
 		
 		var end=function(){
 			This._stop();//彻底关掉engineCtx
@@ -672,7 +672,7 @@ Recorder.prototype=initFn.prototype={
 			end();
 		};
 		var ok=function(blob,duration){
-			console.log("["+Date.now()+"]结束 编码"+(Date.now()-t1)+"ms 音频"+duration+"ms/"+blob.size+"b");
+			// console.log("["+Date.now()+"]结束 编码"+(Date.now()-t1)+"ms 音频"+duration+"ms/"+blob.size+"b");
 			if(blob.size<Math.max(100,duration/2)){//1秒小于0.5k？
 				err("生成的"+set.type+"无效");
 				return;
@@ -722,7 +722,7 @@ Recorder.prototype=initFn.prototype={
 		var res=chunk.data;
 		var duration=Math.round(res.length/set.sampleRate*1000);
 		
-		console.log("采样"+size+"->"+res.length+" 花:"+(Date.now()-t1)+"ms");
+		// console.log("采样"+size+"->"+res.length+" 花:"+(Date.now()-t1)+"ms");
 		
 		setTimeout(function(){
 			t1=Date.now();
