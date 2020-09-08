@@ -1,0 +1,684 @@
+
+[03-Sep-2020 05:03:22]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f3d12017fe0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f3d12017e60] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f3d12017dd0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f3d12017c90] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f3d12017b90] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f3d12017710] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f3d12017640] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f3d120175c0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f3d12017520] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f3d120174d0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 05:09:54]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007ff506018230] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007ff5060180b0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007ff506018020] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007ff506017ee0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007ff506017de0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007ff506017960] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007ff506017890] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007ff506017810] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007ff5060176d0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:58
+[0x00007ff506017570] success() /home/vhall/marketing/web/vhall-web/controllers/Index.php:16
+[0x00007ff506017510] indexAction() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007ff5060174c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 05:28:44]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007ff506016120] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007ff506015fa0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007ff506015f10] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007ff506015dd0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007ff506015cd0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007ff506015850] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007ff506015780] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007ff506015700] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007ff5060155c0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007ff506015510] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007ff5060154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 05:31:20]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007ff506016120] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007ff506015fa0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007ff506015f10] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007ff506015dd0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007ff506015cd0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007ff506015850] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007ff506015780] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007ff506015700] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007ff5060155c0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007ff506015510] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007ff5060154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 05:44:55]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007ff506015fd0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007ff506015e50] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007ff506015dc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007ff506015c80] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007ff506015b80] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007ff506015700] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007ff506015630] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007ff5060155b0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007ff506015510] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007ff5060154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 05:46:58]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007ff506016120] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007ff506015fa0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007ff506015f10] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007ff506015dd0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007ff506015cd0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007ff506015850] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007ff506015780] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007ff506015700] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007ff5060155c0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007ff506015510] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007ff5060154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:03:35]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e16150] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e15fd0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e15f40] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e15e00] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e15d00] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e15880] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e157b0] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f89a2e15730] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f89a2e155f0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007f89a2e15540] init() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f89a2e154f0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[03-Sep-2020 06:04:28]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e16230] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e160b0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e16020] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e15ee0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e15de0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e15960] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e15890] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f89a2e15810] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f89a2e156d0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:58
+[0x00007f89a2e15570] success() /home/vhall/marketing/web/vhall-web/controllers/Index.php:16
+[0x00007f89a2e15510] indexAction() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f89a2e154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:11:17]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e16120] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e15fa0] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e15f10] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e15dd0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e15cd0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e15850] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e15780] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f89a2e15700] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f89a2e155c0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007f89a2e15510] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f89a2e154c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:14:05]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e14fd0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e14e50] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e14dc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e14c80] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e14b80] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e14700] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e14630] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f89a2e145b0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f89a2e14510] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f89a2e144c0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:14:50]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e15a20] file_exists() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:384
+[0x00007f89a2e15430] findFileWithExtension() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:351
+[0x00007f89a2e15200] findFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:321
+[0x00007f89a2e15160] loadClass() unknown:0
+[0x00007f89a2e15100] spl_autoload_call() unknown:0
+[0x00007fff9a9ac3e0] ???() /home/vhall/marketing/web/vhall-core/vendor/psr/http-message/src/RequestInterface.php:24
+[0x00007f89a2e150b0] [INCLUDE_OR_EVAL]() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:444
+[0x00007f89a2e15040] Composer\Autoload\includeFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:322
+[0x00007f89a2e14fa0] loadClass() unknown:0
+[0x00007f89a2e14f40] spl_autoload_call() unknown:0
+[0x00007fff9a9ac930] ???() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/psr7/src/Request.php:12
+[0x00007f89a2e14ef0] [INCLUDE_OR_EVAL]() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:444
+[0x00007f89a2e14e80] Composer\Autoload\includeFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:322
+[0x00007f89a2e14de0] loadClass() unknown:0
+[0x00007f89a2e14d80] spl_autoload_call() unknown:0
+[0x00007fff9a9ace80] ???() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:121
+[0x00007f89a2e14b60] requestAsync() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:131
+[0x00007f89a2e14aa0] request() /home/vhall/marketing/web/vhall-web/utils/WechatUtils.php:125
+[0x00007f89a2e14770] getShortUrl() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Wechat.php:34
+[0x00007f89a2e14500] shortUrlAction() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:19:15]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e15110] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e14f90] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e14f00] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e14dc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e14cc0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e14840] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e14770] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f89a2e146f0] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f89a2e145b0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007f89a2e14500] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f89a2e144b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:20:48]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f89a2e15110] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f89a2e14f90] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f89a2e14f00] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f89a2e14dc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f89a2e14cc0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f89a2e14840] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f89a2e14770] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f89a2e146f0] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f89a2e145b0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007f89a2e14500] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f89a2e144b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[03-Sep-2020 06:26:46]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f0f02414fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f0f02414e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f0f02414db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f0f02414c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f0f02414b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f0f024146f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f0f02414620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f0f024145a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f0f02414500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f0f024144b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 02:00:49]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f0f02416260] file_exists() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:384
+[0x00007f0f02415c70] findFileWithExtension() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:351
+[0x00007f0f02415a40] findFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:321
+[0x00007f0f024159a0] loadClass() unknown:0
+[0x00007f0f02415940] spl_autoload_call() unknown:0
+[0x00007ffecd0ca180] ???() /home/vhall/marketing/web/vhall-core/vendor/illuminate/database/Eloquent/Model.php:18
+[0x00007f0f024158f0] [INCLUDE_OR_EVAL]() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:444
+[0x00007f0f02415880] Composer\Autoload\includeFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:322
+[0x00007f0f024157e0] loadClass() unknown:0
+[0x00007f0f02415780] spl_autoload_call() unknown:0
+[0x00007ffecd0ca6d0] ???() /home/vhall/marketing/web/vhall-core/vendor/illuminate/database/Capsule/Manager.php:134
+[0x00007f0f024156d0] bootEloquent() /home/vhall/marketing/web/vhall-web/Bootstrap.php:78
+[0x00007f0f02415510] _initOrm() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f0f024154c0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 02:35:49]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f0f02415b80] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f0f02415870] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f0f02415550] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f0f02415400] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f0f02415370] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f0f02415230] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f0f024151a0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f0f02415030] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f0f02414de0] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f0f02414d60] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f0f02414c70] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f0f02414bd0] __call() /home/vhall/marketing/web/vhall-web/utils/WechatUtils.php:121
+[0x00007f0f024147b0] getShortUrl() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Wechat.php:34
+[0x00007f0f02414540] shortUrlAction() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f0f024144f0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:14:52]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f28c8a17640] file_exists() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:384
+[0x00007f28c8a17050] findFileWithExtension() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:351
+[0x00007f28c8a16e20] findFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:321
+[0x00007f28c8a16d80] loadClass() /home/vhall/marketing/web/vhall-core/vendor/illuminate/container/Container.php:752
+[0x00007f28c8a16d20] spl_autoload_call() /home/vhall/marketing/web/vhall-core/vendor/illuminate/container/Container.php:752
+[0x00007f28c8a16cc0] __construct() /home/vhall/marketing/web/vhall-core/vendor/illuminate/container/Container.php:752
+[0x00007f28c8a16a70] build() /home/vhall/marketing/web/vhall-core/vendor/illuminate/container/Container.php:631
+[0x00007f28c8a16770] resolve() /home/vhall/marketing/web/vhall-core/vendor/illuminate/container/Container.php:586
+[0x00007f28c8a166f0] make() /home/vhall/marketing/web/vhall-web/Bootstrap.php:74
+[0x00007f28c8a16530] _initOrm() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f28c8a164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:15:00]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f28c8a178b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f28c8a175a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f28c8a17280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f28c8a17130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f28c8a170a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f28c8a16f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f28c8a16ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f28c8a16d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f28c8a16b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f28c8a16a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f28c8a169a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f28c8a16900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f28c8a16630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f28c8a16530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f28c8a164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:15:27]  [pool www] pid 8
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f28c8a178b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f28c8a175a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f28c8a17280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f28c8a17130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f28c8a170a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f28c8a16f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f28c8a16ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f28c8a16d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f28c8a16b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f28c8a16a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f28c8a169a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f28c8a16900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f28c8a16630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f28c8a16530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f28c8a164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:17:58]  [pool www] pid 8
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d0178b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d0175a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d017280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d017130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0170a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d016f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d016d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f238d016a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f238d0169a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f238d016900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f238d016630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f238d016530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:18:04]  [pool www] pid 9
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d0178b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d0175a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d017280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d017130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0170a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d016f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d016d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f238d016a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f238d0169a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f238d016900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f238d016630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f238d016530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:18:04]  [pool www] pid 8
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d0168b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d0165a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d016280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d016130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0160a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d015f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d015ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d015d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d015b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f238d015a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f238d0159a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f238d015900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f238d015630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f238d015530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0154e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:18:10]  [pool www] pid 10
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d0178b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d0175a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d017280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d017130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0170a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d016f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d016d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f238d016a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f238d0169a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f238d016900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f238d016630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f238d016530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0164e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:18:10]  [pool www] pid 8
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d0168b0] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d0165a0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d016280] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d016130] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0160a0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d015f60] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d015ed0] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d015d60] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d015b10] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:110
+[0x00007f238d015a90] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:331
+[0x00007f238d0159a0] executeCommand() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:314
+[0x00007f238d015900] __call() /home/vhall/marketing/web/vhall-web/services/User/impl/BusinessAuthServicesImpl.php:34
+[0x00007f238d015630] updateSession() /home/vhall/marketing/web/vhall-web/Bootstrap.php:112
+[0x00007f238d015530] _initAuth() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0154e0] bootstrap() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:21:57]  [pool www] pid 12
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d015dc0] file_exists() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:384
+[0x00007f238d0157d0] findFileWithExtension() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:351
+[0x00007f238d0155a0] findFile() /home/vhall/marketing/web/vhall-web/vendor/composer/ClassLoader.php:321
+[0x00007f238d015500] loadClass() /home/vhall/marketing/web/vhall-core/utils/ConstantsUtils.php:21
+[0x00007f238d0154a0] spl_autoload_call() /home/vhall/marketing/web/vhall-core/utils/ConstantsUtils.php:21
+[0x00007f238d015440] __construct() /home/vhall/marketing/web/vhall-core/utils/ConstantsUtils.php:21
+[0x00007f238d015390] getConstants() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:229
+[0x00007f238d0151d0] getKey() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:58
+[0x00007f238d014810] sendCode() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Message.php:24
+[0x00007f238d014530] sendCodeAction() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0144e0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:42:47]  [pool www] pid 11
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d016a60] curl_exec() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php:40
+[0x00007f238d0168f0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:28
+[0x00007f238d016820] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:51
+[0x00007f238d016750] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php:66
+[0x00007f238d0164a0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:30
+[0x00007f238d016330] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php:70
+[0x00007f238d016160] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:60
+[0x00007f238d016090] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/HandlerStack.php:67
+[0x00007f238d015fe0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:277
+[0x00007f238d015cd0] transfer() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:125
+[0x00007f238d015ab0] requestAsync() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:131
+[0x00007f238d0159f0] request() /home/vhall/marketing/web/vhall-core/utils/HttpUtils.php:129
+[0x00007f238d015450] post() /home/vhall/marketing/web/vhall-core/utils/YiDunUtils.php:59
+[0x00007f238d0151d0] verify() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:55
+[0x00007f238d014810] sendCode() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Message.php:24
+[0x00007f238d014530] sendCodeAction() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0144e0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:43:02]  [pool www] pid 14
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d018a60] curl_exec() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php:40
+[0x00007f238d0188f0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:28
+[0x00007f238d018820] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:51
+[0x00007f238d018750] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php:66
+[0x00007f238d0184a0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:30
+[0x00007f238d018330] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php:70
+[0x00007f238d018160] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:60
+[0x00007f238d018090] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/HandlerStack.php:67
+[0x00007f238d017fe0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:277
+[0x00007f238d017cd0] transfer() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:125
+[0x00007f238d017ab0] requestAsync() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:131
+[0x00007f238d0179f0] request() /home/vhall/marketing/web/vhall-core/utils/HttpUtils.php:129
+[0x00007f238d017450] post() /home/vhall/marketing/web/vhall-core/utils/YiDunUtils.php:59
+[0x00007f238d0171d0] verify() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:55
+[0x00007f238d016810] sendCode() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Message.php:24
+[0x00007f238d016530] sendCodeAction() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0164e0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 06:43:43]  [pool www] pid 10
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d017210] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d016f00] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d016be0] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d016a90] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d016a00] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d0168c0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016830] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d0166c0] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016470] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:133
+[0x00007f238d0162a0] executePipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:165
+[0x00007f238d016140] flushPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:214
+[0x00007f238d016010] execute() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:445
+[0x00007f238d015ea0] createPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:396
+[0x00007f238d015cf0] sharedContextFactory() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:418
+[0x00007f238d015c70] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:300
+[0x00007f238d087000] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:159
+[0x00007f238cb476c0] doFetch() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:158
+[0x00007f238d015ac0] getItem() /home/vhall/marketing/web/vhall-core/utils/CacheUtils.php:109
+[0x00007f238d015990] get() /home/vhall/marketing/web/vhall-web/common/WebBaseModel.php:22
+[0x00007f238d015880] getCache() /home/vhall/marketing/web/vhall-web/models/BusinessUserExtendModel.php:95
+
+[04-Sep-2020 06:45:26]  [pool www] pid 11
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d017200] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d016ef0] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d016bd0] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d016a80] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d0169f0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d0168b0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016820] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d0166b0] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016460] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:133
+[0x00007f238d016290] executePipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:165
+[0x00007f238d016130] flushPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:214
+[0x00007f238d016000] execute() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:445
+[0x00007f238d015e90] createPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:396
+[0x00007f238d015ce0] sharedContextFactory() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:418
+[0x00007f238d015c60] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:300
+[0x00007f238d087000] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:159
+[0x00007f238cb466c0] doFetch() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:158
+[0x00007f238d015ab0] getItem() /home/vhall/marketing/web/vhall-core/utils/CacheUtils.php:109
+[0x00007f238d015980] get() /home/vhall/marketing/web/vhall-web/common/WebBaseModel.php:22
+[0x00007f238d015870] getCache() /home/vhall/marketing/web/vhall-web/models/BusinessUserExtendModel.php:95
+
+[04-Sep-2020 06:52:05]  [pool www] pid 20
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d019c60] fgets() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:311
+[0x00007f238d019840] read() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:120
+[0x00007f238d0197d0] readResponse() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:141
+[0x00007f238d019600] executePipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:165
+[0x00007f238d0194a0] flushPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:214
+[0x00007f238d019370] execute() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:445
+[0x00007f238d019200] createPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:396
+[0x00007f238d019050] sharedContextFactory() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:418
+[0x00007f238d018fd0] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:300
+[0x00007f2387ec4000] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:281
+[0x00007f238d018da0] doSave() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:233
+[0x00007f238d018820] commit() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:202
+[0x00007f238d018760] save() /home/vhall/marketing/web/vhall-core/utils/CacheUtils.php:99
+[0x00007f238d018670] setItem() /home/vhall/marketing/web/vhall-web/common/WebBaseModel.php:37
+[0x00007f238d0185a0] putCache() /home/vhall/marketing/web/vhall-web/models/BusinessUserExtendModel.php:72
+[0x00007f238d018500] web\models\{closure}() /home/vhall/marketing/web/vhall-core/vendor/illuminate/events/Dispatcher.php:350
+[0x00007f238d018440] Illuminate\Events\{closure}() /home/vhall/marketing/web/vhall-core/vendor/illuminate/events/Dispatcher.php:200
+[0x00007f238d018260] dispatch() /home/vhall/marketing/web/vhall-core/vendor/illuminate/events/Dispatcher.php:173
+[0x00007f238d0181d0] fire() /home/vhall/marketing/web/vhall-core/vendor/illuminate/database/Eloquent/Concerns/HasEvents.php:148
+[0x00007f238d018010] fireModelEvent() /home/vhall/marketing/web/vhall-core/vendor/illuminate/database/Eloquent/Model.php:708
+
+[04-Sep-2020 06:55:00]  [pool www] pid 20
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d017210] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f238d016f00] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f238d016be0] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f238d016a90] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f238d016a00] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f238d0168c0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f238d016830] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f238d0166c0] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f238d016470] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:133
+[0x00007f238d0162a0] executePipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:165
+[0x00007f238d016140] flushPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:214
+[0x00007f238d016010] execute() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:445
+[0x00007f238d015ea0] createPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:396
+[0x00007f238d015cf0] sharedContextFactory() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:418
+[0x00007f238d015c70] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:300
+[0x00007f238d087000] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:159
+[0x00007f238cd476c0] doFetch() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:158
+[0x00007f238d015ac0] getItem() /home/vhall/marketing/web/vhall-core/utils/CacheUtils.php:109
+[0x00007f238d015990] get() /home/vhall/marketing/web/vhall-web/common/WebBaseModel.php:22
+[0x00007f238d015880] getCache() /home/vhall/marketing/web/vhall-web/models/BusinessUserExtendModel.php:95
+
+[04-Sep-2020 07:12:41]  [pool www] pid 14
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f238d016a60] curl_exec() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php:40
+[0x00007f238d0168f0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:28
+[0x00007f238d016820] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php:51
+[0x00007f238d016750] GuzzleHttp\Handler\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php:66
+[0x00007f238d0164a0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:30
+[0x00007f238d016330] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php:70
+[0x00007f238d016160] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Middleware.php:60
+[0x00007f238d016090] GuzzleHttp\{closure}() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/HandlerStack.php:67
+[0x00007f238d015fe0] __invoke() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:277
+[0x00007f238d015cd0] transfer() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:125
+[0x00007f238d015ab0] requestAsync() /home/vhall/marketing/web/vhall-core/vendor/guzzlehttp/guzzle/src/Client.php:131
+[0x00007f238d0159f0] request() /home/vhall/marketing/web/vhall-core/utils/HttpUtils.php:129
+[0x00007f238d015450] post() /home/vhall/marketing/web/vhall-core/utils/YiDunUtils.php:59
+[0x00007f238d0151d0] verify() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:55
+[0x00007f238d014810] sendCode() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Message.php:24
+[0x00007f238d014530] sendCodeAction() /home/vhall/marketing/web/vhall-web/public/index.php:44
+[0x00007f238d0144e0] run() /home/vhall/marketing/web/vhall-web/public/index.php:44
+
+[04-Sep-2020 07:16:44]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f24d3617210] stream_socket_client() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:127
+[0x00007f24d3616f00] createStreamSocket() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:178
+[0x00007f24d3616be0] tcpStreamInitializer() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:100
+[0x00007f24d3616a90] createResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:81
+[0x00007f24d3616a00] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:258
+[0x00007f24d36168c0] connect() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/AbstractConnection.php:180
+[0x00007f24d3616830] getResource() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:288
+[0x00007f24d36166c0] write() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Connection/StreamConnection.php:394
+[0x00007f24d3616470] writeRequest() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:133
+[0x00007f24d36162a0] executePipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:165
+[0x00007f24d3616140] flushPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Pipeline/Pipeline.php:214
+[0x00007f24d3616010] execute() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:445
+[0x00007f24d3615ea0] createPipeline() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:396
+[0x00007f24d3615cf0] sharedContextFactory() /home/vhall/marketing/web/vhall-core/vendor/predis/predis/src/Client.php:418
+[0x00007f24d3615c70] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:300
+[0x00007f24d3687000] pipeline() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Traits/RedisTrait.php:159
+[0x00007f24d3172940] doFetch() /home/vhall/marketing/web/vhall-core/vendor/symfony/cache/Adapter/AbstractAdapter.php:158
+[0x00007f24d3615ac0] getItem() /home/vhall/marketing/web/vhall-core/utils/CacheUtils.php:109
+[0x00007f24d3615990] get() /home/vhall/marketing/web/vhall-web/common/WebBaseModel.php:22
+[0x00007f24d3615880] getCache() /home/vhall/marketing/web/vhall-web/models/BusinessUserExtendModel.php:95
+
+[04-Sep-2020 07:25:44]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f24d36163e0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f24d3616260] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f24d36161d0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f24d3616090] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f24d3615f90] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f24d3615b10] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f24d3615a40] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f24d36159c0] info() /home/vhall/marketing/web/vhall-core/utils/HttpUtils.php:141
+[0x00007f24d3615420] post() /home/vhall/marketing/web/vhall-core/utils/YiDunUtils.php:59
+[0x00007f24d36151a0] verify() /home/vhall/marketing/web/vhall-web/services/Common/impl/ValidateCodeServicesImpl.php:55
+[0x00007f24d36147e0] sendCode() /home/vhall/marketing/web/vhall-web/modules/Common/controllers/Message.php:24
+[0x00007f24d3614500] sendCodeAction() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f24d36144b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 07:34:33]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c17110] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c16f90] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c16f00] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c16dc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c16cc0] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c16840] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c16770] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:56
+[0x00007f4287c166f0] info() /home/vhall/marketing/web/vhall-core/common/BaseController.php:414
+[0x00007f4287c165b0] accessLog() /home/vhall/marketing/web/vhall-core/common/BaseController.php:48
+[0x00007f4287c16500] init() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f4287c164b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 07:48:32]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c15fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c15e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c15db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c15c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c15b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c156f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c15620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f4287c155a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f4287c15500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f4287c154b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 08:25:21]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c15fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c15e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c15db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c15c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c15b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c156f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c15620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f4287c155a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f4287c15500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f4287c154b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 08:28:29]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c15fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c15e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c15db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c15c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c15b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c156f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c15620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f4287c155a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f4287c15500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f4287c154b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 08:37:54]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c15fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c15e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c15db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c15c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c15b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c156f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c15620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f4287c155a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f4287c15500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f4287c154b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 08:41:26]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f4287c15ed0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f4287c15d50] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f4287c15cc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f4287c15b80] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f4287c15a80] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f4287c15600] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f4287c15530] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:140
+[0x00007f4287c154b0] crit() /home/vhall/marketing/web/vhall-web/public/index.php:62
+
+[04-Sep-2020 09:26:30]  [pool www] pid 6
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f7030815fc0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f7030815e40] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f7030815db0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f7030815c70] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f7030815b70] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f70308156f0] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f7030815620] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:42
+[0x00007f70308155a0] debug() /home/vhall/marketing/web/vhall-core/hook/RouteLogHook.php:25
+[0x00007f7030815500] routerStartup() /home/vhall/marketing/web/vhall-web/public/index.php:43
+[0x00007f70308154b0] run() /home/vhall/marketing/web/vhall-web/public/index.php:43
+
+[04-Sep-2020 09:38:36]  [pool www] pid 7
+script_filename = /home/vhall/marketing/web/vhall-web/public/index.php
+[0x00007f7030815ed0] socket_sendto() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:47
+[0x00007f7030815d50] send() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdp/UdpSocket.php:31
+[0x00007f7030815cc0] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/SyslogUdpHandler.php:51
+[0x00007f7030815b80] write() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+[0x00007f7030815a80] handle() /home/vhall/marketing/web/vhall-core/vendor/monolog/monolog/src/Monolog/Logger.php:337
+[0x00007f7030815600] addRecord() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:201
+[0x00007f7030815530] writeLog() /home/vhall/marketing/web/vhall-core/utils/LogUtils.php:126
+[0x00007f70308154b0] error() /home/vhall/marketing/web/vhall-web/public/index.php:54
