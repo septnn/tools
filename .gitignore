@@ -2,3 +2,5 @@
 runtimes/
 .idea
 vendor/
+docker/dev/v3.1/conf/nginx/log/*
+docker/dev/v3.1/conf/php7.0.33/log/*
