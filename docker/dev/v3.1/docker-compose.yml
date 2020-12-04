@@ -1,6 +1,84 @@
-version: 'v1.0'
+version: '3'
 services:
-  php:
-    build: ./conf/php
-    ports: 
-    - "9000:9000"
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "81:81"
+      - "433:433"
+    extra_hosts: # 设置容器 hosts
+      - "dev-api-zhike.vhall.domain:127.0.0.1"
+      - "dev-api-e.vhall.local:127.0.0.1"
+      - "dev-api-e-common.vhall.domain:127.0.0.1"
+      - "dev-api-e-interact.vhall.domain:127.0.0.1"
+      - "dev-api-e-user.vhall.domain:127.0.0.1"
+      - "dev-api-e-webinar.vhall.domain:127.0.0.1"
+    restart: always # docker重启后，自动启动
+    volumes:
+      # linux
+      - /mnt/e/vhall:/var/www/html
+      - /mnt/e/github/tools/docker/dev/v3.1/conf/nginx:/etc/nginx
+      # win
+#      - /e/vhall:/var/www/html
+#      - /e/github/tools/docker/dev/v3.1/conf/nginx:/etc/nginx
+    depends_on: # 依赖其它容器
+      - phpfpm7033
+      - phpfpm7325
+
+  phpfpm7033:
+    image: phpfpm7033
+    container_name: phpfpm7033
+    build:
+      context: ./conf/php7.0.33
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    extra_hosts: # 设置容器 hosts
+        - "dev-api-zhike.vhall.domain:192.168.2.33"
+        - "dev-api-e.vhall.local:192.168.2.33"
+        - "dev-api-e-common.vhall.domain:192.168.2.33"
+        - "dev-api-e-interact.vhall.domain:192.168.2.33"
+        - "dev-api-e-user.vhall.domain:192.168.2.33"
+        - "dev-api-e-webinar.vhall.domain:192.168.2.33"
+    volumes:
+      # linux
+      - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
+      - /mnt/e/vhall:/var/www/html
+      # win
+#      - /e/github/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
+#      - /e/vhall:/var/www/html
+    cap_add:
+      - SYS_PTRACE
+      - SYS_TIME
+
+  phpfpm7325:
+    image: phpfpm7325
+    container_name: phpfpm7325
+    build:
+      context: ./conf/php7.3.25
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9001"
+    extra_hosts: # 设置容器 hosts
+        - "dev-api-zhike.vhall.domain:192.168.2.33"
+        - "dev-api-e.vhall.local:192.168.2.33"
+        - "dev-api-e-common.vhall.domain:192.168.2.33"
+        - "dev-api-e-interact.vhall.domain:192.168.2.33"
+        - "dev-api-e-user.vhall.domain:192.168.2.33"
+        - "dev-api-e-webinar.vhall.domain:192.168.2.33"
+    volumes:
+      # linux
+      - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc
+      - /mnt/e/vhall:/var/www/html
+      # win
+#      - /e/github/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc
+#      - /e/vhall:/var/www/html
+    cap_add:
+      - SYS_PTRACE
+      - SYS_TIME
+
+networks:
+  default:
+    external:
+      name: "vhall"
