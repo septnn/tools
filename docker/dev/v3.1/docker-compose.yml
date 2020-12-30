@@ -35,12 +35,12 @@ services:
     ports:
       - "9000:9000"
     extra_hosts: # 设置容器 hosts
-        - "dev-api-zhike.vhall.domain:192.168.2.33"
-        - "dev-api-e.vhall.local:192.168.2.33"
-        - "dev-api-e-common.vhall.domain:192.168.2.33"
-        - "dev-api-e-interact.vhall.domain:192.168.2.33"
-        - "dev-api-e-user.vhall.domain:192.168.2.33"
-        - "dev-api-e-webinar.vhall.domain:192.168.2.33"
+        - "dev-api-zhike.vhall.domain:192.168.3.1"
+        - "dev-api-e.vhall.local:192.168.3.1"
+        - "dev-api-e-common.vhall.domain:192.168.3.1"
+        - "dev-api-e-interact.vhall.domain:192.168.3.1"
+        - "dev-api-e-user.vhall.domain:192.168.3.1"
+        - "dev-api-e-webinar.vhall.domain:192.168.3.1"
     volumes:
       # linux
       - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
@@ -59,14 +59,14 @@ services:
       context: ./conf/php7.3.25
       dockerfile: Dockerfile
     ports:
-      - "9000:9001"
+      - "9001:9001"
     extra_hosts: # 设置容器 hosts
-        - "dev-api-zhike.vhall.domain:192.168.2.33"
-        - "dev-api-e.vhall.local:192.168.2.33"
-        - "dev-api-e-common.vhall.domain:192.168.2.33"
-        - "dev-api-e-interact.vhall.domain:192.168.2.33"
-        - "dev-api-e-user.vhall.domain:192.168.2.33"
-        - "dev-api-e-webinar.vhall.domain:192.168.2.33"
+        - "dev-api-zhike.vhall.domain:192.168.3.1"
+        - "dev-api-e.vhall.local:192.168.3.1"
+        - "dev-api-e-common.vhall.domain:192.168.3.1"
+        - "dev-api-e-interact.vhall.domain:192.168.3.1"
+        - "dev-api-e-user.vhall.domain:192.168.3.1"
+        - "dev-api-e-webinar.vhall.domain:192.168.3.1"
     volumes:
       # linux
       - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc

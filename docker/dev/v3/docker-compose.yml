@@ -1,6 +1,7 @@
-version: 'v1.0'
+version: '1'
 services:
   php:
-    build: ./conf/php
-    ports: 
-    - "9000:9000"
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
