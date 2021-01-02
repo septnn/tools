@@ -17,11 +17,8 @@ services:
     restart: always # docker重启后，自动启动
     volumes:
       # linux
-      - /mnt/e/vhall:/var/www/html
-      - /mnt/e/github/tools/docker/dev/v3.1/conf/nginx:/etc/nginx
-      # win
-#      - /e/vhall:/var/www/html
-#      - /e/github/tools/docker/dev/v3.1/conf/nginx:/etc/nginx
+      - /mnt/e/docker/vhall:/var/www/html
+      - /mnt/e/docker/septnn/tools/docker/dev/v3.1/conf/nginx:/etc/nginx
     depends_on: # 依赖其它容器
       - phpfpm7033
       - phpfpm7325
@@ -43,11 +40,8 @@ services:
         - "dev-api-e-webinar.vhall.domain:192.168.3.1"
     volumes:
       # linux
-      - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
-      - /mnt/e/vhall:/var/www/html
-      # win
-#      - /e/github/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
-#      - /e/vhall:/var/www/html
+      - /mnt/e/docker/vhall:/var/www/html
+      - /mnt/e/docker/septnn/tools/docker/dev/v3.1/conf/php7.0.33:/usr/local/etc
     cap_add:
       - SYS_PTRACE
       - SYS_TIME
@@ -69,11 +63,8 @@ services:
         - "dev-api-e-webinar.vhall.domain:192.168.3.1"
     volumes:
       # linux
-      - /mnt/e/github/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc
-      - /mnt/e/vhall:/var/www/html
-      # win
-#      - /e/github/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc
-#      - /e/vhall:/var/www/html
+      - /mnt/e/docker/vhall:/var/www/html
+      - /mnt/e/docker/septnn/tools/docker/dev/v3.1/conf/php7.3.25:/usr/local/etc
     cap_add:
       - SYS_PTRACE
       - SYS_TIME
